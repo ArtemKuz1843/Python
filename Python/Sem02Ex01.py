@@ -1,4 +1,4 @@
-# a = 'hello'
+a = 'hello'
 # for i in a:
 #     print (i)
 
@@ -14,8 +14,8 @@
 # for ind in range(len(a)):
 #      print (ind)
 
-# for ind in range(len(a)):
-#      print (a[ind])
+for ind in range(len(a)):
+     print (a[ind])
 
 # for ind in range(len(a)):
 #      print (a[ind], end=' ') # конструкция с (, end=' ') выведет в строчку
@@ -32,15 +32,15 @@
 # # Input: 5
 # # Output: 120
 
-n = int(input('Введите неотрицательное число: '))
-while n < 0:
-    print('Ошибка ввода ')
-    n = int(input('Введите неотрицательное число: '))
-
-count = 2
-fact = 1
-while count <= n:
-    fact = fact * count
-    count = count + 1
-
-print(f'{n}! = {fact}')
+# n = int(input('Введите неотрицательное число: '))
+# while n < 0:
+#     print('Ошибка ввода ')
+#     n = int(input('Введите неотрицательное число: '))
+#
+# count = 2
+# fact = 1
+# while count <= n:
+#     fact = fact * count
+#     count = count + 1
+#
+# print(f'{n}! = {fact}')
