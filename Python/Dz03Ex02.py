@@ -23,29 +23,23 @@ for i in mass:
 print(f'Заданное число встречается в массиве {count} раз(а)')
 
 ost = []
-for i in mass:
-    if i > x:
-        ost.append(int(i - x))
-    if x > i:
-        ost.append(int(x - i))
+for j in mass:
+    if j > x:
+        ost.append(int(j - x))
+    if x > j:
+        ost.append(int(x - j))
+    if x == j:
+        ost.append(int(x - j))
 
-print(f'Ваш массив ост: {ost}')
+print(f'Массив остатков: {ost}')
 
 min = ost[0]
+# print(f'мин: {min}')
+for i in range(len(ost)):
+    if ost[i] < min:
+        min = ost[i]
 print(f'мин: {min}')
-count = 0
-position = -1
 
-g = 0
-for g in ost:
-    if min == g:
-        count = count + 1
-        position = ost.index(g, end)
-        print(f'позиция: {position}')
-    if g < min:
-        min = g
-        count = 1
-        position = ost.index(g, start)
-        print(f'позиция: {position}')
-
-print(f'Приближенное числа: {mass[position]}, встречается {count} раз(а)')
+for i in range(len(ost)):
+    if ost[i] == min:
+        print(f'Cамый близкий по величине к {x} элемент: {mass[i]}')
