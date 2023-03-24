@@ -9,22 +9,47 @@
 # YES
 
 str1 = input('Введите первую строку: ')
-str2 = ''
-# str2 = input('Введите вторую строку: ')
+str1 = str1.lower ()
+str2 = input('Введите вторую строку: ')
+str2 = str2.lower ()
 
 punctuation = ['.',',',':',';','?','!','...','-','"','(',')','/',' ']
 
-# x = str1[0]
-# if punctuation.count(x):
-#     print(x)
-
-x = ''
 for i in str1:
-    x = i
-    if punctuation.count(x):
-        str1 = str1.replace(x, '')
+    if punctuation.count(i):
+        str1 = str1.replace(i, '')
 
-print(str1)
+for i in str2:
+    if punctuation.count(i):
+        str2 = str2.replace(i, '')
 
-# SetLetters1 = set()
-# SetLetters2 = set()
+str1 = list(str1)
+for i in range(len(str1)):
+    j = i + 1
+    counter = '1'
+    while j < len(str1):
+        if str1[i] == str1[j]:
+            counter = str(counter)
+            str1[j] = str1[i] + counter
+            counter = int(counter)
+            counter = counter + 1
+        j = j + 1
+str1 = set(str1)
+
+str2 = list(str2)
+for i in range(len(str2)):
+    j = i + 1
+    counter = '1'
+    while j < len(str2):
+        if str2[i] == str2[j]:
+            counter = str(counter)
+            str2[j] = str2[i] + counter
+            counter = int(counter)
+            counter = counter + 1
+        j = j + 1
+str2 = set(str2)
+
+if str1 == str2:
+    print('Являются анограммами')
+else:
+    print('Не являются анагаммами')
