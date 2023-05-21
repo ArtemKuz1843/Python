@@ -3,6 +3,7 @@
 # *Пример:*
 # 3 2 4 -> yes
 # 3 2 1 -> no
+
 lengthChocolate = int(input('Введите длину вашей шоколадки в дольках: '))
 widthChocolate = int(input('Введите ширину вашей шоколадки в дольках: '))
 sliceСhocolate = int(input('Сколько долек хотите отломить: '))
