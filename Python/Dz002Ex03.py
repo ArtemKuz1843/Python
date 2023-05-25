@@ -9,3 +9,15 @@ while num >= number:
     print(f'{number} - это 2 в степени {count}')
     count += 1
     number = 2 ** count
+
+# Пример идеального решения
+#
+# Задача
+# 14
+#
+# n = int(input())
+# i = 0
+# while 2 ** i <= n:
+#     print(2 ** i)
+#     i += 1
+

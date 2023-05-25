@@ -15,3 +15,15 @@ print(f'X =', num1)
 
 num2 = (sumNums - math.sqrt(sumNums * sumNums - 4 * multiplicationNums)) / 2
 print(f'Y =', num2)
+
+# Пример идеального решения
+#
+# Задача 12
+#
+# x = int(input())
+# y = int(input())
+# for i in range(x):
+#     for j in range(y):
+#         if x == i + j and y == i * j:
+#             print(i, j)
+
