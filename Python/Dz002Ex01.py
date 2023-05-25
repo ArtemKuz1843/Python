@@ -6,12 +6,18 @@ coinS = int(input('Введите число монеток, лежащих на
 
 heads = 0
 tails = 0
+
+from random import randint
+
 for _ in range(coinS):
-    coin = int(input('Какой стороной лежит монетка? 1 - орёл, 2 -решка : '))
+    coin = randint(1, 2)
     if coin == 1:
         heads += 1
     if coin == 2:
         tails += 1
+
+print(f'Количество орлов: {heads}')
+print(f'Количество решек: {tails}')
 
 if heads > tails:
     print(f'Количество монет, которые нужно перевернуть, чтобы все стали орлами: {tails}')
