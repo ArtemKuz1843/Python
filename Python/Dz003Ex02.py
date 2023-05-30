@@ -13,7 +13,7 @@ mass = []
 from random import randint
 
 for _ in range(long):
-    num = randint(-10, 10)
+    num = randint(-15, 15)
     mass.append(int(num))
 
 print(f'Ваш массив: {mass}')
