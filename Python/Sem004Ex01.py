@@ -1,33 +1,27 @@
 # Напишите программу, которая принимает на вход строку, и отслеживает, сколько раз каждый символ уже встречался.
 # Количество повторов добавляется к символам с помощью постфикса формата _n.
 
-# stroka = input("Введите строку: ")
-#
-# print(stroka)
-#
-# spisok = []
-# for i in stroka:
-#     spisok.append(i)
-# print(spisok)
-#
-# mnog = set(spisok)
-#
-# print(mnog)
-#
-# spisokSravn = list(mnog)
-#
-# print(spisokSravn)
-#
-#
-# for i in spisokSravn:
-#     count = 0
-#     for j in spisok:
-#         if i == j:
-#             count += 1
-#             count = str(count)
-#             j = j + count
-#             count = int(count)
-# print(spisok)
+stroka = input("Введите строку: ")
+
+spisok = []
+for i in stroka:
+    spisok.append(i)
+print(spisok)
+
+mnog = set(spisok)
+spisokSravn = list(mnog)
+print(spisokSravn)
+
+for i in spisokSravn:
+    count = 0
+    for j in range(len(spisok)):
+        if i == spisok[j]:
+            count += 1
+            count = str(count)
+            spisok[j] = i + '_' + count
+            count = int(count)
+
+print(spisok)
 
 
 # Задача №27. Решение в группах
@@ -54,24 +48,24 @@
 # spisokDlin = list(mnog)
 # print(len(spisokDlin))
 # ________________________________
-Ваня и Петя поспорили, кто быстрее решит следующую задачу: “Задана последовательность неотрицательных целых чисел.
-Требуется определить значение наибольшего элемента последовательности, которая завершается первым встретившимся нулем
-(число 0 не входит в последовательность)”. Однако 2 друга оказались не такими смышлеными. Никто из ребят не смог до
-конца сделать это задание. Они решили так: у кого будет меньше ошибок в коде, тот и выиграл спор. За помощью товарищи
-обратились к Вам, студентам.
-
-n = int(input())
-max_number = 1000
-while n != 0:
-n = int(input())
-if max_number > n:
-max_number = n
-print(max_number)
-
-n = int(input())
-max_number = -1
-while n < 0:
-n = int(input())
-if max_number < n:
-n = max_number
-print(n)
+# Ваня и Петя поспорили, кто быстрее решит следующую задачу: “Задана последовательность неотрицательных целых чисел.
+# Требуется определить значение наибольшего элемента последовательности, которая завершается первым встретившимся нулем
+# (число 0 не входит в последовательность)”. Однако 2 друга оказались не такими смышлеными. Никто из ребят не смог до
+# конца сделать это задание. Они решили так: у кого будет меньше ошибок в коде, тот и выиграл спор. За помощью товарищи
+# обратились к Вам, студентам.
+#
+# n = int(input())
+# max_number = 1000
+# while n != 0:
+# n = int(input())
+# if max_number > n:
+# max_number = n
+# print(max_number)
+#
+# n = int(input())
+# max_number = -1
+# while n < 0:
+# n = int(input())
+# if max_number < n:
+# n = max_number
+# print(n)
