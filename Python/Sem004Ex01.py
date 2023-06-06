@@ -1,27 +1,58 @@
 # Напишите программу, которая принимает на вход строку, и отслеживает, сколько раз каждый символ уже встречался.
 # Количество повторов добавляется к символам с помощью постфикса формата _n.
+# stroka = input("Введите строку: ")
+#
+# spisok = []
+# for i in stroka:
+#     spisok.append(i)
+# print(spisok)
+#
+# mnog = set(spisok)
+# spisokSravn = list(mnog)
+# print(spisokSravn)
+#
+# for i in spisokSravn:
+#     count = 0
+#     for j in range(len(spisok)):
+#         if i == spisok[j]:
+#             count += 1
+#             count = str(count)
+#             spisok[j] = i + '_' + count
+#             count = int(count)
+#
+# print(spisok)
+# _________________
+import random
 
-stroka = input("Введите строку: ")
+my_list = [random.randint(0,10) for _ in range(20)]
+print(my_list)
 
-spisok = []
-for i in stroka:
-    spisok.append(i)
-print(spisok)
+counter = {}
 
-mnog = set(spisok)
-spisokSravn = list(mnog)
-print(spisokSravn)
+# # for item in my_list:
+# #     counter[item] = counter.get(item, 0) + 1
+# # print(counter)
+#
+# for item in my_list:
+#     counter[item] = counter.get(item, 0) + 1
+#     print(item if counter.get(item) < 2 else (str(item) + '_' + str(counter.get(item) - 1)), end = ' ') # end = ' ' чтобы было в 1 строчку
+#
+# #набираем список в столбик
+# # for item in my_list:
+# #     counter[item] = counter.get(item, 0) + 1
+# #     print(counter)
+# # _______________
 
-for i in spisokSravn:
-    count = 0
-    for j in range(len(spisok)):
-        if i == spisok[j]:
-            count += 1
-            count = str(count)
-            spisok[j] = i + '_' + count
-            count = int(count)
+# for i in my_list:
+#     if counter.get(i, None): # if counter.get(i)
+#         counter[i] += 1
+#     else:
+#         counter[i] = 1
 
-print(spisok)
+for i in my_list:
+    print(counter[i] += 1 if counter.get(i) else counter[i] = 1)
+
+print(counter)
 
 
 # Задача №27. Решение в группах
