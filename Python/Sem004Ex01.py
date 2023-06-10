@@ -22,12 +22,12 @@
 #
 # print(spisok)
 # _________________
-import random
-
-my_list = [random.randint(0,10) for _ in range(20)]
-print(my_list)
-
-counter = {}
+# import random
+#
+# my_list = [random.randint(0,10) for _ in range(20)]
+# print(my_list)
+#
+# counter = {}
 
 # # for item in my_list:
 # #     counter[item] = counter.get(item, 0) + 1
@@ -48,36 +48,31 @@ counter = {}
 #         counter[i] += 1
 #     else:
 #         counter[i] = 1
+#
+# # for i in my_list: # попытка переписать в 1 строку
+# #     print(counter[i] += 1 if counter.get(i) else counter[i] = 1)
+# #
+# print(counter)
+# _________________________
 
-for i in my_list:
-    print(counter[i] += 1 if counter.get(i) else counter[i] = 1)
-
-print(counter)
-
-
-# Задача №27. Решение в группах
-# Пользователь вводит текст(строка). Словом считается
-# последовательность непробельных символов идущих
-# подряд, слова разделены одним или большим числом
-# пробелов. Определите, сколько различных слов
+# Задача №27. Решение в группах. Пользователь вводит текст(строка). Словом считается последовательность непробельных
+# символов идущих подряд, слова разделены одним или большим числом пробелов. Определите, сколько различных слов
 # содержится в этом тексте.
-# Input: She sells sea shells on the sea shore The shells
-# that she sells are sea shells I'm sure.So if she sells sea
-# shells on the sea shore I'm sure that the shells are sea
-# shore shells
+# Input: She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells
 # Output: 13
 
-# stroka = input("Введите строку: ")
+stroka = '''She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells 
+sea shells on the sea shore I'm sure that the shells are sea shore shells'''
 # print(stroka)
 #
-# spisok = stroka.split()
-# print(spisok)
-#
-# mnog = set(spisok)
-# print(mnog)
-#
-# spisokDlin = list(mnog)
-# print(len(spisokDlin))
+spisok = stroka.split()
+print(spisok)
+
+mnog = set(spisok)
+print(mnog)
+
+spisokDlin = list(mnog)
+print(len(spisokDlin))
 # ________________________________
 # Ваня и Петя поспорили, кто быстрее решит следующую задачу: “Задана последовательность неотрицательных целых чисел.
 # Требуется определить значение наибольшего элемента последовательности, которая завершается первым встретившимся нулем
