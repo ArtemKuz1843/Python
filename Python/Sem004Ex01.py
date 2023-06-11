@@ -58,22 +58,36 @@
 # Задача №27. Решение в группах. Пользователь вводит текст(строка). Словом считается последовательность непробельных
 # символов идущих подряд, слова разделены одним или большим числом пробелов. Определите, сколько различных слов
 # содержится в этом тексте.
-# Input: She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells
+# Input: She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea
+# shells on the sea shore I'm sure that the shells are sea shore shells
 # Output: 13
 
-stroka = '''She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells 
-sea shells on the sea shore I'm sure that the shells are sea shore shells'''
+# stroka = '''She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells
+# sea shells on the sea shore I'm sure that the shells are sea shore shells'''
+# from string import punctuation
+# # print(punctuation) #знаки припинания
+# for ch in punctuation:# отчистим строку от знаков припинания
+#     stroka = stroka.replace(ch, '')
+
 # print(stroka)
+# ___
+# stroka = stroka.upper()
+# spisok = stroka.split()
+# # print(spisok)
 #
-spisok = stroka.split()
-print(spisok)
-
-mnog = set(spisok)
-print(mnog)
-
-spisokDlin = list(mnog)
-print(len(spisokDlin))
-# ________________________________
+# mnog = set(spisok)
+# print(mnog)
+#
+# spisokDlin = list(mnog)
+# print(len(spisokDlin))
+# ___
+# stroka = stroka.lower().split() #сплит от ничего разделит по пробелам в список и съест лишние пробелы
+# print(stroka)
+# print(len(set(stroka)))
+# # print(set(stroka))
+# from string import ascii_letters # выведет английский алфавит мал и бол
+# print(ascii_letters)
+# ____________________
 # Ваня и Петя поспорили, кто быстрее решит следующую задачу: “Задана последовательность неотрицательных целых чисел.
 # Требуется определить значение наибольшего элемента последовательности, которая завершается первым встретившимся нулем
 # (число 0 не входит в последовательность)”. Однако 2 друга оказались не такими смышлеными. Никто из ребят не смог до
@@ -95,3 +109,11 @@ print(len(spisokDlin))
 # if max_number < n:
 # n = max_number
 # print(n)
+
+num = int(input('Введите число: '))
+maxNum = num
+while num != 0:
+    num = int(input('Введите число: '))
+    if num > maxNum:
+        maxNum = num
+print(maxNum)
