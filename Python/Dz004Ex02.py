@@ -8,38 +8,38 @@
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
 
-# shrubs = int(input('Введите раазмер круговой грядки: '))
-# row = []
-#
-# from random import randint
-# for i in range(shrubs):
-#     i = randint(1, 100)
-#     row.append(i)
-# print(row)
-#
-# indMax = 1
-# max = row[indMax - 1] + row[indMax] + row[indMax + 1]
-#
-# for i in range(-1, shrubs-1):
-#     print(i)
-#     print(row[i-1] + row[i] + row[i+1])
-#     if max < row[i-1] + row[i] + row[i+1]:
-#         max = row[i-1] + row[i] + row[i+1]
-#         indMax = i
-#     if indMax < 0:
-#         indMax = shrubs - 1
-# print(f'Максимальное количество ягод которое может быть собрано за 1 заход = {max}, находясь перед кустом {indMax + 1}')
+shrubs = int(input('Введите раазмер круговой грядки: '))
+row = []
+
+from random import randint
+for i in range(shrubs):
+    i = randint(1, 100)
+    row.append(i)
+print(row)
+
+indMax = 1
+max = row[indMax - 1] + row[indMax] + row[indMax + 1]
+
+for i in range(-1, shrubs-1):
+    # print(i)
+    # print(row[i-1] + row[i] + row[i+1])
+    if max < row[i-1] + row[i] + row[i+1]:
+        max = row[i-1] + row[i] + row[i+1]
+        indMax = i
+    if indMax < 0:
+        indMax = shrubs - 1
+print(f'Максимальное количество ягод которое может быть собрано за 1 заход = {max}, находясь перед кустом {indMax + 1}')
 #
 # __ проверочное решение ___
-
-n = int(input())
-arr = list()
-for i in range(n):
-    x = int(input())
-    arr.append(x)
-
-arr_count = list()
-for i in range(len(arr)-1):
-    arr_count.append(arr[i-1] + arr[i] + arr[i+1])
-arr_count.append(arr[-2] + arr[-1] + arr[0])
-print(max(arr_count))
+#
+# n = int(input())
+# arr = list()
+# for i in range(n):
+#     x = int(input())
+#     arr.append(x)
+#
+# arr_count = list()
+# for i in range(len(arr)-1):
+#     arr_count.append(arr[i-1] + arr[i] + arr[i+1])
+# arr_count.append(arr[-2] + arr[-1] + arr[0])
+# print(max(arr_count))
