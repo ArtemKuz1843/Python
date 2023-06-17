@@ -6,9 +6,9 @@
 num1 = int(input('Введите число: '))
 num2 = int(input('Введите степень для числа: '))
 
-def degree(n1, n2):
-    while n2 > 1:
-        result = n1 * degree(n1, n2 - 1)
-        return result
+def degree(number, nStep):
+    if nStep == 0:
+        return 1
+    return number * degree(number, nStep - 1)
 
 print(degree(num1, num2))
